@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
 
-input_values = [1, 2, 3, 4, 5]
-squares = [1, 4, 9, 16, 25]
+x_values = [1, 2, 3, 4, 5]
+y_values = [1, 4, 9, 16, 25]
 
 plt.style.use('grayscale')
 fig, ax = plt.subplots()
-ax.plot(input_values, squares, linewidth=3)
+ax.scatter(x_values, y_values, s=100)
 
 # 设置字体为楷体
 plt.rcParams['font.sans-serif'] = ['KaiTi']
@@ -16,6 +16,6 @@ ax.set_xlabel("值", fontsize=14)
 ax.set_ylabel("值的平方", fontsize=14)
 
 # 设置刻度标记的大小
-ax.tick_params(axis='both', labelsize=14)
+ax.tick_params(axis='both', which='major', labelsize=14)
 
 plt.show()
