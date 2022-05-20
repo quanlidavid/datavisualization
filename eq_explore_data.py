@@ -4,7 +4,7 @@ import plotly.express as px
 import pandas as pd
 
 # 探索数据的结构
-filename = 'data/eq_data_1_day_m1.json'
+filename = 'data/eq_data_30_day_m1.json'
 with open(filename) as f:
     all_eq_data = json.load(f)
 
@@ -39,6 +39,8 @@ fig = px.scatter(
     title="全球地震散点图",
     size="震级",
     size_max=10,
+    color="震级",
+    hover_name="位置",
 )
 
 fig.write_html("global_earthquakes.html")

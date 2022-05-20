@@ -36,6 +36,7 @@ fig = px.scatter(
     width=800,
     height=800,
     title="全球地震散点图",
+    size_max=10,
 )
 
 data = [Scattergeo(lon=lons, lat=lats)]
